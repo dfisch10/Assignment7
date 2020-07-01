@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using Unity;
 using Xunit;
 
 namespace XUnitTestProject1
@@ -15,11 +16,10 @@ namespace XUnitTestProject1
         [MemberData(nameof(AddData))]
         public void Add_VariousQuanitityOfNumbersInputted_ReturnsValid(double expectedResult, params double[] operands)
         {
-            var provider = new ServiceCollection()
-                           .AddSingleton<ICalculator, Calculator>()
-                           .BuildServiceProvider();
+            var container = new UnityContainer();
+            container.RegisterType<ICalculator, Calculator>();
 
-            var sut = provider.GetService<ICalculator>();
+            var sut = container.Resolve<Calculator>();
             sut.Operands = operands;
             var actual = sut.Add(sut);
 
@@ -43,11 +43,10 @@ namespace XUnitTestProject1
         [MemberData(nameof(SubtractData))]
         public void Subtract_VariousQuanitityOfNumbersInputted_ReturnsValid(double expectedResult, params double[] operands)
         {
-            var provider = new ServiceCollection()
-                           .AddSingleton<ICalculator, Calculator>()
-                           .BuildServiceProvider();
+            var container = new UnityContainer();
+            container.RegisterType<ICalculator, Calculator>();
 
-            var sut = provider.GetService<ICalculator>();
+            var sut = container.Resolve<Calculator>();
             sut.Operands = operands;
             var actual = sut.Subtract(sut);
 
@@ -70,11 +69,10 @@ namespace XUnitTestProject1
         [MemberData(nameof(MultiplyData))]
         public void Multiply_VariousQuanitityOfNumbersInputted_ReturnsValid(double expectedResult, params double[] operands)
         {
-            var provider = new ServiceCollection()
-                          .AddSingleton<ICalculator, Calculator>()
-                          .BuildServiceProvider();
+            var container = new UnityContainer();
+            container.RegisterType<ICalculator, Calculator>();
 
-            var sut = provider.GetService<ICalculator>();
+            var sut = container.Resolve<Calculator>();
             sut.Operands = operands;
             var actual = sut.Multiply(sut);
 
@@ -97,11 +95,10 @@ namespace XUnitTestProject1
         [MemberData(nameof(DivideData))]
         public void Divide_VariousQuanitityOfNumbersInputted_ReturnsValid(double expectedResult, params double[] operands)
         {
-            var provider = new ServiceCollection()
-                           .AddSingleton<ICalculator, Calculator>()
-                           .BuildServiceProvider();
+            var container = new UnityContainer();
+            container.RegisterType<ICalculator, Calculator>();
 
-            var sut = provider.GetService<ICalculator>();
+            var sut = container.Resolve<Calculator>();
             sut.Operands = operands;
             var actual = sut.Divide(sut);
 
