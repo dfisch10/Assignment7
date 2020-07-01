@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using DryIoc;
 using ImTools;
 using Microsoft.Extensions.DependencyInjection;
+using Unity;
 
 namespace Assignment_7
 {
@@ -11,11 +12,16 @@ namespace Assignment_7
     {
         static void Main(string[] args)
         {
-            var provider = new ServiceCollection()
+            var container = new UnityContainer();
+            container.RegisterType<ICalculator, Calculator>();
+
+            var service = container.Resolve<Calculator>();
+
+            /*var provider = new ServiceCollection()
                            .AddSingleton<ICalculator, Calculator>()
                            .BuildServiceProvider();
 
-            var service = provider.GetService<ICalculator>();
+            var service = provider.GetService<ICalculator>();*/
 
             var menuRecall = true;
 
