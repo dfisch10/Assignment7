@@ -2,7 +2,7 @@
 {
     public interface ICalculatorDisplayUtility
     {
-
+        #region Methods
         void Menu(bool menuRecall, ICalculator calculator) { }
         void ConvertStringToInt() { }
         void CompareUserInputToAcceptedOptionsList() { }
@@ -13,5 +13,6 @@
         void receiveInput() { }
         void errorMessageDisplay() { }
         void receiveOperandAmount() { }
+        #endregion
     }
 }
