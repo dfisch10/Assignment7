@@ -12,6 +12,7 @@ namespace XUnitTestProject1
     [ExcludeFromCodeCoverage]
     public class UnitTest1
     {
+        #region Calculator Class Tests
         [Theory]
         [MemberData(nameof(AddData))]
         public void Add_VariousQuanitityOfNumbersInputted_ReturnsValid(double expectedResult, params double[] operands)
@@ -117,8 +118,9 @@ namespace XUnitTestProject1
             new object[] { 31.142857142857142, new double[] { 654, 21 } },
             new object[] { 5.5, new double[] { 55, 10 } },
         };
+        #endregion
 
-
+        #region Calculator Display Utility Tests
         [Theory]
         [MemberData(nameof(CheckUserInputData))]
         public void CheckUserInput_UserOptionOneThroughFiveInputted_ReturnsValid(string input, List<string> inputOptions)
@@ -158,5 +160,6 @@ namespace XUnitTestProject1
             new object[] {"4", 4},
             new object[] {"5", 5}
         };
+        #endregion
     }
 }
