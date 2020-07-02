@@ -7,6 +7,7 @@ namespace Assignment_7
 {
     public class CalculatorDisplayUtility: ICalculatorDisplayUtility
     {
+        #region Public Methods
         /// <summary>
         /// This method displays the Menu options, and activates the appropriate option/methods depending on the user Input.
         /// </summary>
@@ -54,7 +55,9 @@ namespace Assignment_7
         {
             return inputOptions.Contains(input);
         }
+        #endregion
 
+        #region Private Methods
         /// <summary>
         /// Determines what cases/procedures to run based off of the option the user selected from the menu. Also throws error message if value entered is null, or not one of the accepted case values.
         /// </summary>
@@ -233,6 +236,7 @@ namespace Assignment_7
 
             return Console.ReadLine();
         }
+        #endregion
     }
 }
 
