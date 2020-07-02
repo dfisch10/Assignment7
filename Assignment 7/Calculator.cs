@@ -6,7 +6,11 @@ namespace Assignment_7
 {
     public class Calculator : ICalculator
     {
+        #region Parameters
         public double[] Operands { get; set; }
+        #endregion
+
+        #region Methods
 
         /// <summary>
         /// Takes an array of double type operands that the user inputs, and then returns their sum.
@@ -88,5 +92,6 @@ namespace Assignment_7
 
             return result;
         }
+        #endregion
     }
 }
