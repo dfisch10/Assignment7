@@ -13,7 +13,7 @@ namespace Assignment_7
         #region Methods
 
         /// <summary>
-        /// Takes an array of double type operands that the user inputs, and then returns their sum.
+        /// Takes an ICalculator object's operands that the user inputs, and then returns their sum.
         /// </summary>
         /// <param name="operands">An array of double type numeric values.</param>
         /// <returns>Returns the sum of all the numbers.</returns>
@@ -25,7 +25,7 @@ namespace Assignment_7
         }
 
         /// <summary>
-        /// Takes an array of double type operands that the user inputs, and then returns the difference.
+        /// Takes an ICalculator object's operands that the user inputs, and then returns the difference.
         /// </summary>
         /// <param name="operands">An array of double type numeric values.</param>
         /// <returns>Returns the difference of all the numbers.</returns>
@@ -52,7 +52,7 @@ namespace Assignment_7
         }
 
         /// <summary>
-        /// Takes an array of double type operands that the user inputs, and then returns their product.
+        /// Takes an ICalculator object's operands that the user inputs, and then returns their product.
         /// </summary>
         /// <param name="operands">An array of double type numeric values.</param>
         /// <returns>Returns the product of all the numbers.</returns>
@@ -69,7 +69,7 @@ namespace Assignment_7
         }
 
         /// <summary>
-        /// Takes an array of double type operands that the user inputs, and then returns thei quotient.
+        /// Takes an ICalculator object's operands that the user inputs, and then returns thei quotient.
         /// </summary>
         /// <param name="operands">An array of double type numeric values.</param>
         /// <returns>Returns the quotient of all the numbers.</returns>
