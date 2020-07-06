@@ -225,6 +225,7 @@ namespace Assignment_7
             Console.WriteLine(errorMessage);
             Console.ResetColor();
         }
+
         /// <summary>
         /// Prompts the user for the amount of operands(numbers) they would like to use to do their designated calculation.
         /// </summary>
