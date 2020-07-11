@@ -81,22 +81,6 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
-      "DryIoc/4.2.1": {
-        "type": "package",
-        "dependencies": {
-          "System.Reflection.Emit.Lightweight": "4.3.0"
-        },
-        "contentFiles": {
-          "contentFiles/any/any/_._": {
-            "buildAction": "None",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
-        },
-        "build": {
-          "build/_._": {}
-        }
-      },
       "Fare/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -1437,6 +1421,15 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1928,6 +1921,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Unity/5.11.7": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Unity.Abstractions.dll": {},
+          "lib/netcoreapp3.0/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Unity.Abstractions.dll": {},
+          "lib/netcoreapp3.0/Unity.Container.dll": {}
+        }
+      },
       "xunit/2.4.1": {
         "type": "package",
         "dependencies": {
@@ -2011,8 +2018,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "DryIoc": "4.2.1",
-          "Microsoft.Extensions.DependencyInjection": "3.1.5"
+          "Microsoft.Extensions.DependencyInjection": "3.1.5",
+          "Unity": "5.11.7"
         },
         "compile": {
           "bin/placeholder/Assignment 7.dll": {}
@@ -2140,64 +2147,6 @@
         "coverlet-icon.png",
         "coverlet.collector.1.3.0.nupkg.sha512",
         "coverlet.collector.nuspec"
-      ]
-    },
-    "DryIoc/4.2.1": {
-      "sha512": "5soJpCDXFnJml2VmmgD2MZod5kfWBNaxxmrd2kXZEMIGBj2W4L2oEtjykicIC++XOhflFubx8wzpqT4W+tWH5A==",
-      "type": "package",
-      "path": "dryioc/4.2.1",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "CompileTimeDI/CompileTimeRegistrations.Example.cs",
-        "CompileTimeDI/CompileTimeRegistrations.ttinclude",
-        "CompileTimeDI/Container.Generated.tt",
-        "DryIoc.snk",
-        "LICENSE.txt",
-        "build/DryIoc.props",
-        "content/net35/DryIoc/Container.cs",
-        "content/net35/DryIoc/FastExpressionCompiler.cs",
-        "content/net35/DryIoc/ImTools.cs",
-        "content/net40/DryIoc/Container.cs",
-        "content/net40/DryIoc/FastExpressionCompiler.cs",
-        "content/net40/DryIoc/ImTools.cs",
-        "content/net45/DryIoc/Container.cs",
-        "content/net45/DryIoc/Expression.cs",
-        "content/net45/DryIoc/FastExpressionCompiler.cs",
-        "content/net45/DryIoc/ImTools.cs",
-        "content/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc/Container.cs",
-        "content/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc/FastExpressionCompiler.cs",
-        "content/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc/ImTools.cs",
-        "content/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc/Container.cs",
-        "content/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc/FastExpressionCompiler.cs",
-        "content/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc/ImTools.cs",
-        "contentFiles/cs/net35/DryIoc/Container.cs",
-        "contentFiles/cs/net35/DryIoc/FastExpressionCompiler.cs",
-        "contentFiles/cs/net35/DryIoc/ImTools.cs",
-        "contentFiles/cs/net40/DryIoc/Container.cs",
-        "contentFiles/cs/net40/DryIoc/FastExpressionCompiler.cs",
-        "contentFiles/cs/net40/DryIoc/ImTools.cs",
-        "contentFiles/cs/net45/DryIoc/Container.cs",
-        "contentFiles/cs/net45/DryIoc/Expression.cs",
-        "contentFiles/cs/net45/DryIoc/FastExpressionCompiler.cs",
-        "contentFiles/cs/net45/DryIoc/ImTools.cs",
-        "contentFiles/cs/netstandard1.0/DryIoc/Container.cs",
-        "contentFiles/cs/netstandard1.0/DryIoc/FastExpressionCompiler.cs",
-        "contentFiles/cs/netstandard1.0/DryIoc/ImTools.cs",
-        "contentFiles/cs/netstandard1.3/DryIoc/Container.cs",
-        "contentFiles/cs/netstandard1.3/DryIoc/Expression.cs",
-        "contentFiles/cs/netstandard1.3/DryIoc/FastExpressionCompiler.cs",
-        "contentFiles/cs/netstandard1.3/DryIoc/ImTools.cs",
-        "contentFiles/cs/netstandard2.0/DryIoc/Container.cs",
-        "contentFiles/cs/netstandard2.0/DryIoc/Expression.cs",
-        "contentFiles/cs/netstandard2.0/DryIoc/FastExpressionCompiler.cs",
-        "contentFiles/cs/netstandard2.0/DryIoc/ImTools.cs",
-        "dryioc.4.2.1.nupkg.sha512",
-        "dryioc.nuspec",
-        "logo.png",
-        "readme.txt",
-        "tools/ExpressionToCodeLib.2.6.0/ExpressionToCodeLib.dll"
       ]
     },
     "Fare/2.1.1": {
@@ -5272,6 +5221,31 @@
         "system.runtime.nuspec"
       ]
     },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Runtime.Extensions/4.3.0": {
       "sha512": "guW0uK0fn5fcJJ1tJVXYd7/1h5F+pea1r7FLSOz/f8vPEqbR2ZAknuRDvTQ8PzAilDveOxNjSfr0CHfIQfFk8g==",
       "type": "package",
@@ -6573,6 +6547,57 @@
         "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll",
         "system.xml.xmlserializer.4.0.11.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
+      ]
+    },
+    "Unity/5.11.7": {
+      "sha512": "hlJ6/MuLnSb//f4wwMZyOYko6iiDt2WNNP1R8vqL0heruP/7qDhL0vCq+FRIMrtj1rUa9BaEdzR5weMbhi6gQA==",
+      "type": "package",
+      "path": "unity/5.11.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Unity.Abstractions.dll",
+        "lib/net40/Unity.Abstractions.pdb",
+        "lib/net40/Unity.Container.dll",
+        "lib/net40/Unity.Container.pdb",
+        "lib/net45/Unity.Abstractions.dll",
+        "lib/net45/Unity.Abstractions.pdb",
+        "lib/net45/Unity.Container.dll",
+        "lib/net45/Unity.Container.pdb",
+        "lib/net46/Unity.Abstractions.dll",
+        "lib/net46/Unity.Abstractions.pdb",
+        "lib/net46/Unity.Container.dll",
+        "lib/net46/Unity.Container.pdb",
+        "lib/net47/Unity.Abstractions.dll",
+        "lib/net47/Unity.Abstractions.pdb",
+        "lib/net47/Unity.Container.dll",
+        "lib/net47/Unity.Container.pdb",
+        "lib/net48/Unity.Abstractions.dll",
+        "lib/net48/Unity.Abstractions.pdb",
+        "lib/net48/Unity.Container.dll",
+        "lib/net48/Unity.Container.pdb",
+        "lib/netcoreapp1.0/Unity.Abstractions.dll",
+        "lib/netcoreapp1.0/Unity.Abstractions.pdb",
+        "lib/netcoreapp1.0/Unity.Container.dll",
+        "lib/netcoreapp1.0/Unity.Container.pdb",
+        "lib/netcoreapp2.0/Unity.Abstractions.dll",
+        "lib/netcoreapp2.0/Unity.Abstractions.pdb",
+        "lib/netcoreapp2.0/Unity.Container.dll",
+        "lib/netcoreapp2.0/Unity.Container.pdb",
+        "lib/netcoreapp3.0/Unity.Abstractions.dll",
+        "lib/netcoreapp3.0/Unity.Abstractions.pdb",
+        "lib/netcoreapp3.0/Unity.Container.dll",
+        "lib/netcoreapp3.0/Unity.Container.pdb",
+        "lib/netstandard1.0/Unity.Abstractions.dll",
+        "lib/netstandard1.0/Unity.Abstractions.pdb",
+        "lib/netstandard1.0/Unity.Container.dll",
+        "lib/netstandard1.0/Unity.Container.pdb",
+        "lib/netstandard2.0/Unity.Abstractions.dll",
+        "lib/netstandard2.0/Unity.Abstractions.pdb",
+        "lib/netstandard2.0/Unity.Container.dll",
+        "lib/netstandard2.0/Unity.Container.pdb",
+        "unity.5.11.7.nupkg.sha512",
+        "unity.nuspec"
       ]
     },
     "xunit/2.4.1": {
