@@ -22,7 +22,7 @@ namespace Assignment7.tests
 
             var sut = container.Resolve<Calculator>();
             sut.Operands = operands;
-            var actual = sut.Add(sut);
+            var actual = sut.Add(sut.Operands);
 
             Assert.Equal(expectedResult, actual);
         }
@@ -49,7 +49,7 @@ namespace Assignment7.tests
 
             var sut = container.Resolve<Calculator>();
             sut.Operands = operands;
-            var actual = sut.Subtract(sut);
+            var actual = sut.Subtract(sut.Operands);
 
             Assert.Equal(expectedResult, actual);
         }
@@ -75,7 +75,7 @@ namespace Assignment7.tests
 
             var sut = container.Resolve<Calculator>();
             sut.Operands = operands;
-            var actual = sut.Multiply(sut);
+            var actual = sut.Multiply(sut.Operands);
 
             Assert.Equal(expectedResult, actual);
         }
@@ -101,7 +101,7 @@ namespace Assignment7.tests
 
             var sut = container.Resolve<Calculator>();
             sut.Operands = operands;
-            var actual = sut.Divide(sut);
+            var actual = sut.Divide(sut.Operands);
 
             Assert.Equal(expectedResult, actual);
         }
@@ -125,8 +125,7 @@ namespace Assignment7.tests
         [MemberData(nameof(CheckUserInputData))]
         public void CheckUserInput_UserOptionOneThroughFiveInputted_ReturnsValid(string input, List<string> inputOptions)
         {
-            var displayUtility = new CalculatorDisplayUtility();
-            var actual = displayUtility.CompareUserInputToAcceptedOptionsList(input, inputOptions);
+            var actual = CalculatorDisplayUtility.CompareUserInputToAcceptedOptionsList(input, inputOptions);
 
             Assert.True(actual);
         }
@@ -145,8 +144,7 @@ namespace Assignment7.tests
         [MemberData(nameof(ConvertStringToIntData))]
         public void ConvertStringToInt_UserMenuOptionsPassedAndIntValueReturned_ReturnsValid(string input, int expectedResult)
         {
-            var displayUtility = new CalculatorDisplayUtility();
-            var actual = displayUtility.ConvertStringToInt(input);
+            var actual = CalculatorDisplayUtility.ConvertStringToInt(input);
 
             Assert.Equal(actual, expectedResult);
         }
