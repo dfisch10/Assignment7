@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
-using DryIoc;
-using ImTools;
 using Microsoft.Extensions.DependencyInjection;
 using Unity;
 
@@ -13,6 +11,7 @@ namespace Assignment_7
         static void Main(string[] args)
         {
             var container = new UnityContainer();
+            
             container.RegisterType<ICalculator, Calculator>();
 
             var service = container.Resolve<Calculator>();
@@ -25,11 +24,9 @@ namespace Assignment_7
 
             var menuRecall = true;
 
-            var displayMenu = new CalculatorDisplayUtility();
-
             while (menuRecall)
             {
-                displayMenu.Menu(out menuRecall, service);
+                CalculatorDisplayUtility.Menu(out menuRecall, service);
             }
         }
     }

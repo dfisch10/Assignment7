@@ -7,7 +7,9 @@ namespace Assignment_7
     public class Calculator : ICalculator
     {
         #region Parameters
+
         public double[] Operands { get; set; }
+
         #endregion
 
         #region Methods
@@ -17,9 +19,9 @@ namespace Assignment_7
         /// </summary>
         /// <param name="operands">An array of double type numeric values.</param>
         /// <returns>Returns the sum of all the numbers.</returns>
-        public double Add(ICalculator calculator)
+        public double Add(params double[] values)
         {
-            var result = calculator.Operands.Sum();
+            var result = values.Sum();
 
             return result;
         }
@@ -29,13 +31,13 @@ namespace Assignment_7
         /// </summary>
         /// <param name="operands">An array of double type numeric values.</param>
         /// <returns>Returns the difference of all the numbers.</returns>
-        public double Subtract(ICalculator calculator)
+        public double Subtract(params double[] values)
         {
             double result = 0;
 
             int counter = 1;
 
-            foreach (double operand in calculator.Operands)
+            foreach (double operand in values)
             {
                 if (counter == 1)
                 {
@@ -56,11 +58,11 @@ namespace Assignment_7
         /// </summary>
         /// <param name="operands">An array of double type numeric values.</param>
         /// <returns>Returns the product of all the numbers.</returns>
-        public double Multiply(ICalculator calculator)
+        public double Multiply(params double[] values)
         {
             double result = 1;
 
-            foreach (double operand in calculator.Operands)
+            foreach (double operand in values)
             {
                 result = result * operand;
             }
@@ -73,25 +75,26 @@ namespace Assignment_7
         /// </summary>
         /// <param name="operands">An array of double type numeric values.</param>
         /// <returns>Returns the quotient of all the numbers.</returns>
-        public double Divide(ICalculator calculator)
+        public double Divide(params double[] values)
         {
             double result = 0;
 
-            for(var index = 0; index < calculator.Operands.Length; index++)
+            for(var index = 0; index < values.Length; index++)
             
             {
                 if(index == 0)
                 {
-                    result = calculator.Operands[index];
+                    result = values[index];
                 }
                 else
                 {
-                    result /= calculator.Operands[index];
+                    result /= values[index];
                 }                                                 
             }
 
             return result;
         }
+
         #endregion
     }
 }
