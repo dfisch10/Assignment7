@@ -106,3 +106,5 @@ C:\Users\Maldarin\source\repos\Assignment 7\XUnitTestProject1\obj\Debug\netcorea
 C:\Users\Maldarin\source\repos\Assignment 7\XUnitTestProject1\bin\Debug\netcoreapp3.1\testhost.exe
 C:\Users\Maldarin\source\repos\Assignment 7\XUnitTestProject1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Maldarin\source\repos\Assignment 7\XUnitTestProject1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Maldarin\source\repos\Assignment 7\XUnitTestProject1\bin\Debug\netcoreapp3.1\Unity.Abstractions.dll
+C:\Users\Maldarin\source\repos\Assignment 7\XUnitTestProject1\bin\Debug\netcoreapp3.1\Unity.Container.dll
